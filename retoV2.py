@@ -50,7 +50,7 @@ def movimiento_inicial(lista,a):
             t.forward(1)
             pos=t.pos()
             #Imprimir pocision en todo momento
-            #print(pos)
+            print(pos)
             #Que hacer si encuentra un punto
             for z in range(len(lista)):
                 var=lista[z]
@@ -73,7 +73,7 @@ def movimiento_secundario(conjunto,a,coordx,coordy):
             t.forward(1)
             ubi=t.pos()
             #Imprimir pocision en todo momento
-            #print(j)
+            print(ubi)
             #Que hacer si encuentra otro punto
             for z in range(len(conjunto)):
                 coords=conjunto[z]
@@ -94,6 +94,8 @@ def localizar_punto(coordx,coordy,ubix,ubiy,a):
     t.left(90)
     t.forward(25)
     tray=t.pos()
+    #pocision en todo momento
+    print(tray)
     trayx=int(tray[0])
     trayy=int(tray[1])
     ax=a[0]
@@ -101,9 +103,9 @@ def localizar_punto(coordx,coordy,ubix,ubiy,a):
 
     if (trayx<(ax+15))and(trayx>(ax-15)):
         print(tray)
-        t.goto(ax+10,ay)
+        t.goto(ax+5,ay)
         t.color("black")
-        t.circle(10)
+        t.circle(5)
         t.up()
         t.hideturtle()
 
